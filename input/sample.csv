@@ -4,4 +4,6 @@ account.detail.branch_code.title,Account number,Account number
 account.detail.credit_card.card_number.title,Account number,Account number
 account.detail.credit_card.card_number.title2,Account number,Account number
 account.detail.credit_card.card_number.title3,Account number,Account number
+account.detail.credit_card.card_number.title4,Account number,Account number
+
 
