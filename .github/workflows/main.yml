@@ -15,7 +15,7 @@ jobs:
     
     env: 
       TARGET_REPO_NAME: localization
-=      CONFIG_GITHUB_EMAIL: vinhgv2206@gmail.com
+      CONFIG_GITHUB_EMAIL: vinhgv2206@gmail.com
       CONFIG_GITHUB_USERNAME: vinhgiap
 
     steps:
