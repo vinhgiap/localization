@@ -15,7 +15,8 @@ jobs:
     
     env: 
       TARGET_REPO_NAME: localization
-      
+      BASE_BRANCH: main
+
     steps:
       - uses: actions/checkout@v3
 
@@ -33,5 +34,15 @@ jobs:
         
       - name: general file strings.
         run: csv-localizer -p ios -i ./$TARGET_REPO_NAME/input -o ./$TARGET_REPO_NAME
-
+        
+      - name: Commit.
+        run: git status
+             git add .
+             git commit -m "General file locables files".
+             
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.SECRET_GITHUB_TOKEN }}
+          branch: $BASE_BRANCH
         
