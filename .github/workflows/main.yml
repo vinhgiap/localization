@@ -15,8 +15,7 @@ jobs:
     
     env: 
       TARGET_REPO_NAME: localization
-      BASE_BRANCH: main
-      CONFIG_GITHUB_EMAIL: vinhgv2206@gmail.com
+=      CONFIG_GITHUB_EMAIL: vinhgv2206@gmail.com
       CONFIG_GITHUB_USERNAME: vinhgiap
 
     steps:
@@ -62,5 +61,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.SECRET_GITHUB_TOKEN }}
-          branch: $BASE_BRANCH
+          branch: main
         
