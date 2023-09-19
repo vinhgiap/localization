@@ -2,3 +2,4 @@ key,vi,en
 account.detail.account_number.title,Account number,Account number
 account.detail.branch_code.title,Account number,Account number
 account.detail.credit_card.card_number.title,Account number,Account number
+account.detail.credit_card.card_number.title2,Account number,Account number
