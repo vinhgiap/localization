@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: install brew
-        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
       - name: install convert csv to strings files.
         run: brew tap rogermolas/csv-localizer
