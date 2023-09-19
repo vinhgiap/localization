@@ -16,6 +16,8 @@ jobs:
     env: 
       TARGET_REPO_NAME: localization
       BASE_BRANCH: main
+      CONFIG_GITHUB_EMAIL: vinhgv2206@gmail.com
+      CONFIG_GITHUB_USERNAME: vinhgiap
 
     steps:
       - uses: actions/checkout@v3
@@ -34,12 +36,17 @@ jobs:
         
       - name: general file strings.
         run: csv-localizer -p ios -i ./$TARGET_REPO_NAME/input -o ./$TARGET_REPO_NAME
+
+      - name: Config git credentials
+        run: |        
+          git config --local user.email "$CONFIG_GITHUB_EMAIL"
+          git config --local user.name "$CONFIG_GITHUB_USERNAME"
         
       - name: Commit files
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -a -m "Add changes"
+          git status
+          git add .
+          git commit -m "Add changes"
              
       - name: Push changes
         uses: ad-m/github-push-action@master
