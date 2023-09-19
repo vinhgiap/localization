@@ -30,7 +30,7 @@ jobs:
         run: brew install csv-localizer
         
       - name: remove old localizations folder.
-        run: rm -rf ./$TARGET_REPO_NAME/input/*
+        run: rm -rf ./$TARGET_REPO_NAME/output/*
         
       - name: general file strings.
         run: csv-localizer -p ios -i ./$TARGET_REPO_NAME/input -o ./$TARGET_REPO_NAME
