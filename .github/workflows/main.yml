@@ -1,0 +1,31 @@
+name: Generate output files from updated tokens
+
+on:
+  # Triggers the workflow on push events to the input folder
+  push:
+    branches:
+      - main
+    paths:
+      - 'input/**'
+  
+jobs:
+  # Generates output files and commit/push to design-tokens repo
+  generate-tokens:
+    runs-on: macos-latest
+    
+    env: 
+      TARGET_REPO_NAME: localization
+      TARGET_REPO_URL: https://${{ secrets.SECRET_GITHUB_TOKEN }}@github.com/vinhgiap/demotokens.git
+      
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: install brew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
+
+      - name: install convert csv to strings files.
+        run: brew tap rogermolas/csv-localizer
+        
+      - name: install convert csv to strings files.
+        run: brew install csv-localizer  
+        
