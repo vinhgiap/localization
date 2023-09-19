@@ -15,7 +15,6 @@ jobs:
     
     env: 
       TARGET_REPO_NAME: localization
-      TARGET_REPO_URL: https://${{ secrets.SECRET_GITHUB_TOKEN }}@github.com/vinhgiap/demotokens.git
       
     steps:
       - uses: actions/checkout@v3
@@ -27,5 +26,9 @@ jobs:
         run: brew tap rogermolas/csv-localizer
         
       - name: install convert csv to strings files.
-        run: brew install csv-localizer  
+        run: brew install csv-localizer
+        
+      - name: remove old localizations folder.
+        run: rm -rf ./$TARGET_REPO_NAME/input/*
+
         
