@@ -30,5 +30,8 @@ jobs:
         
       - name: remove old localizations folder.
         run: rm -rf ./$TARGET_REPO_NAME/input/*
+        
+      - name: general file strings.
+        run: csv-localizer -p ios -i ./$TARGET_REPO_NAME/input -o ./$TARGET_REPO_NAME
 
         
