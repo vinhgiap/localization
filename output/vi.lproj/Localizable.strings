@@ -1,7 +1,6 @@
 
-/*  sample  */
-"pause_messge" = "tạm thời dừng lại";
-"start_messge" = "bắt đầu thực hiện";
-"stop_messge" = "ngừng chạy";
-
-"stop_messge2" = "ngừng chạy";
+/*  test  */
+"pause_messge" = "dừng";
+"start_messge" = "chạy";
+"stop_messge" = "dừng";
+"stop_messge2" = "dừng";
